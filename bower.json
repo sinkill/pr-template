@@ -1,0 +1,20 @@
+{
+  "name": "pr-template",
+  "version": "0.0.1",
+  "description": "A template for a quick start.",
+  "license": "MIT",
+  "dependencies": {
+    "es5-shim": "latest",
+    "event-shim.js": "latest",
+    "html5shiv": "latest",
+    "css3-mediaqueries-js": "latest",
+    "jquery": "2.1.4"
+  },
+  "overrides": {
+    "jquery": {
+      "main": [
+        "./dist/jquery.js"
+      ]
+    }
+  }
+}

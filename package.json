@@ -1,0 +1,81 @@
+{
+  "name": "pr-template",
+  "version": "0.0.1",
+  "description": "A template for a quick start.",
+  "author": {
+    "name": "Artem Krynkin",
+    "url": ""
+  },
+  "scripts": {
+    "postinstall": "bower install",
+    "start": "gulp --debug",
+    "build": "npm run clean && gulp build",
+    "lint": "gulp lint",
+    "deploy": "npm run clean && gulp build --robots && gulp deploy",
+    "clean": "rm -rf dist/*",
+    "zip": "npm run clean && gulp zip"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "bugs": {
+    "url": "",
+    "email": "pagesppl@gmail.com"
+  },
+  "keywords": [
+    "program code",
+    "project",
+    "template",
+    "frontend",
+    "gulp",
+    "jade",
+    "stylus"
+  ],
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "devDependencies": {
+    "autoprefixer-stylus": "^0.8.0",
+    "babel-core": "^5.8.34",
+    "babel-eslint": "^4.1.5",
+    "bemto.jade": "^0.2.2",
+    "browser-sync": "^2.10.0",
+    "debuga": "^1.0.2",
+    "eslint": "^1.9.0",
+    "gulp": "^3.9.0",
+    "gulp-cached": "^1.1.0",
+    "gulp-changed": "^1.3.0",
+    "gulp-concat": ">=2.1.7",
+    "gulp-csscomb": "^3.0.6",
+    "gulp-eslint": "^1.1.0",
+    "gulp-filter": "^3.0.1",
+    "gulp-gh-pages": "^0.5.4",
+    "gulp-group-css-media-queries": "^1.1.0",
+    "gulp-html-prettify": "^0.0.1",
+    "gulp-if": "^2.0.0",
+    "gulp-imagemin": "^2.4.0",
+    "gulp-jade": "^1.1.0",
+    "gulp-jade-inheritance": "^0.5.3",
+    "gulp-minify-css": "^1.2.1",
+    "gulp-plumber": "^1.0.1",
+    "gulp-plumber-error-handler": "^1.0.0",
+    "gulp-prettify": "^0.3.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-stylus": "^2.1.0",
+    "gulp-svg-symbols": "^1.0.0",
+    "gulp-uglify": "^1.1.0",
+    "gulp-util": "^3.0.2",
+    "gulp-watch": "^4.3.5",
+    "gulp-zip": "^3.0.0",
+    "gulp.spritesmith": "^4.2.4",
+    "js-beautify": "^1.5.1",
+    "main-bower-files": "^2.9.0",
+    "path": "^0.12.7",
+    "pixelsmith": "^2.0.0",
+    "require-dir": "^0.3.0",
+    "run-sequence": "^1.1.4",
+    "rupture": "^0.6.1"
+  },
+  "license": "MIT"
+}

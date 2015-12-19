@@ -1,0 +1,11 @@
+include ../blocks/header/header
+
+extends ../blocks/layout-default/layout-default
+
+block head
+  - var pageTitle = 'Главная страница';
+
+block content
+  +header()
+  .page__wrapper
+  | Description
