@@ -25,7 +25,7 @@ gulp.task('externals', function () {
 
     gulp.src(vendors)
         .pipe(concat('_externals.min.js'))
-        .pipe(uglify())
+        //.pipe(uglify())
         .pipe(gulp.dest(config.build));
 
     gulp.src(mainBowerFiles('**/*.js'))

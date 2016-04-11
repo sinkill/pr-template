@@ -15,7 +15,9 @@ gulp.task('templates', function () {
         .pipe(plumber({errorHandler: errorHandler('Error in \'templates\' task')}))
         .pipe(cached('jade'))
         .pipe(gulpif(global.watch, inheritance({basedir: 'app'})))
-        .pipe(filter(file => /app[\\\/]pages/.test(file.path)))
+        .pipe(filter(function (file) {
+            return /app[\\\/]pages/.test(file.path);
+        }))
         .pipe(jade())
         .pipe(prettify({
             brace_style: 'expand',

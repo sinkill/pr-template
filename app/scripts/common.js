@@ -4,8 +4,6 @@
 var $document = $(document),
     $window = $(window),
     $body = $(document.body),
-    $htmlBody = $body.add('html'),
-    $page = $('body.page'),
     BrowserDetect = {
         init: function () {
             this.browser = this.searchString(this.dataBrowser) || 'An unknown browser';

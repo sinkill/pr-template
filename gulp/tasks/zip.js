@@ -3,17 +3,19 @@ var gulp = require('gulp'),
     zip = require('gulp-zip'),
     config = require('../config.js').paths;
 
-var correctNumber = number => number < 10 ? '0' + number : number;
+var correctNumber = function (number) {
+    return number < 10 ? '0' + number : number;
+}
 
 var getDateTime = function () {
-	var now = new Date(),
-		year = now.getFullYear(),
-		month = correctNumber(now.getMonth() + 1),
-		day = correctNumber(now.getDate()),
-		hours = correctNumber(now.getHours()),
-		minutes = correctNumber(now.getMinutes());
+    var now = new Date(),
+        year = now.getFullYear(),
+        month = correctNumber(now.getMonth() + 1),
+        day = correctNumber(now.getDate()),
+        hours = correctNumber(now.getHours()),
+        minutes = correctNumber(now.getMinutes());
 
-    return `${year}-${month}-${day}-${hours}${minutes}`;
+    return '${year}-${month}-${day}-${hours}${minutes}';
 };
 
 gulp.task('zip', function () {

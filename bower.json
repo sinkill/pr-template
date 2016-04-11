@@ -8,12 +8,29 @@
     "event-shim.js": "latest",
     "html5shiv": "latest",
     "css3-mediaqueries-js": "latest",
-    "jquery": "2.1.4"
+    "jquery": "~1.11.3",
+    "bootstrap": "^3.3.6",
+    "fotorama": "^4.6.4"
   },
   "overrides": {
     "jquery": {
       "main": [
         "./dist/jquery.js"
+      ]
+    },
+    "bootstrap": {
+      "main": [
+        "./dist/css/bootstrap.css",
+        "./dist/css/bootstrap.css.map",
+        "./dist/js/bootstrap.js"
+      ]
+    },
+    "fotorama": {
+      "main": [
+        "./fotorama.css",
+        "./fotorama.js",
+        "./fotorama.png",
+        "./fotorama@2x.png"
       ]
     }
   }

@@ -1,16 +1,14 @@
-var gulp = require('gulp'),
-    runSequence = require('run-sequence');
+'use strict';
+
+var gulp = require('gulp');
+var runSequence = require('run-sequence');
 
 
 gulp.task('stylesDependences', function () {
     runSequence(
-        [
-            'stylesBower',
-            'sprites',
-            'icons',
-            'styles'
-        ],
-        'stylesBuild'
+        'sprites',
+        //'icons',
+        'styles'
     );
 });
 
@@ -24,9 +22,10 @@ gulp.task('default', function () {
     runSequence(
         [
             'stylesDependences',
+            'stylesExternals',
             'tplsDependences',
             'scripts',
-            //'lint',
+            'copy',
             'data',
             'externals'
         ],
@@ -38,10 +37,10 @@ gulp.task('default', function () {
 gulp.task('build', function () {
     runSequence(
         'stylesDependences',
+        'stylesExternals',
         'tplsDependences',
         'scripts',
         'copy',
-        'data',
         'externals'
     );
 });
