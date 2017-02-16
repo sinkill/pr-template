@@ -13,21 +13,12 @@ gulp.task('watch', function () {
     watch('app/{styles,blocks}/**/*.styl', function () {
         runSequence(
             'styles', function () {
-                reload('styles/base.min.css');
-                reload('styles/common.min.css');
+                reload('public/build/build.min.css');
             }
         );
     });
 
-    watch('dist/styles/**.css', function () {
-        runSequence(
-            'stylesBuild', function () {
-                reload('dist/build/build.min.css');
-            }
-        );
-    });
-
-    watch('app/{pages,blocks}/**/*.jade', function () {
+    watch('app/{pages,blocks}/**/*.pug', function () {
         runSequence(
             'templates', function () {
                 reload
@@ -51,16 +42,11 @@ gulp.task('watch', function () {
 
     watch('app/{scripts,blocks}/**/*.js', function () {
         runSequence(
-            'scripts',
-            //'lint',
-            reload
-        );
-    });
-
-    watch('app/icons/**/*.svg', function () {
-        runSequence(
-            'icons',
-            reload
+            'scripts', function () {
+                setTimeout(function () {
+                    reload
+                }, 500);
+            }
         );
     });
 });

@@ -6,13 +6,12 @@ var gulp = require('gulp'),
     imagemin = require('gulp-imagemin'),
     config = require('../config').paths;
 
-
 gulp.task('copy', function () {
-    gulp.src('app/resources/**/*')
-        .pipe(changed(config.distPath))
+    gulp.src(['app/resources/**/*', 'app/resources/.htaccess'])
+        .pipe(changed(config.publicPath))
         .pipe(gulpif(!gutil.env.robots, filter(function (file) {
             return !/resources[\\\/]robots\.txt/.test(file.path);
         })))
         .pipe(imagemin({optimizationLevel: 5}))
-        .pipe(gulp.dest(config.distPath));
+        .pipe(gulp.dest(config.publicPath));
 });

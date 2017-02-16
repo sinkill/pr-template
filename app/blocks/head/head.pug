@@ -49,10 +49,9 @@ head
   meta(name='keywords' content=pageKeywords || '')
 
   link(href='/build/externals.min.css' rel='stylesheet')
-  link(href='/vendors/gridstack.css' rel='stylesheet')
   link(href='/build/build.min.css' rel='stylesheet')
 
-  script(src='https://cdn.polyfill.io/v2/polyfill.min.js')
+  +script([], ['https://cdn.polyfill.io/v2/polyfill.min.js'])
   +script([], ['_externals.min.js'])
   +script([], ['_scripts.min.js'])
 

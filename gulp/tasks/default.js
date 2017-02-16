@@ -26,7 +26,6 @@ gulp.task('default', function () {
             'tplsDependences',
             'scripts',
             'copy',
-            'data',
             'externals'
         ],
         'server',

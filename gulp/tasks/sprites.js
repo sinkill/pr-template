@@ -1,17 +1,16 @@
-var gulp = require('gulp');
-var plumber = require('gulp-plumber');
-var spritesmith = require('gulp.spritesmith-multi');
-var merge = require('merge-stream');
-var path = require('path');
-var errorHandler = require('gulp-plumber-error-handler');
-var config = require('../config.js').paths;
+var gulp = require('gulp'),
+    plumber = require('gulp-plumber'),
+    spritesmith = require('gulp.spritesmith-multi'),
+    merge = require('merge-stream'),
+    path = require('path'),
+    errorHandler = require('gulp-plumber-error-handler'),
+    config = require('../config').paths;
 
-var spritesDirPath = 'app/sprites';
-var imgPath = '../images/sprites/';
-var tmplName = 'stylus_retina.template.handlebars';
-var tmplPath = '../../node_modules/spritesmith-stylus-retina-template';
-var cssTemplate = path.join(__dirname, tmplPath, tmplName);
-
+var spritesDirPath = 'app/sprites',
+    imgPath = '../images/sprites/',
+    tmplName = 'stylus_retina.template.handlebars',
+    tmplPath = '../../node_modules/spritesmith-stylus-retina-template',
+    cssTemplate = path.join(__dirname, tmplPath, tmplName);
 
 gulp.task('sprites', function () {
     var spriteData = gulp.src(['app/sprites/**/*.png', '!app/sprites/*.png'])
